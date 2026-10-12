@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
+import BannerSection from "@/components/BannerSection";
 import BrandStory from "@/components/BrandStory";
 import StatsSection from "@/components/StatsSection";
 import ProductShowcase from "@/components/ProductShowcase";
@@ -18,8 +18,8 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* Hero Section with GSAP Stagger, Floating Badges & Logo Centerpiece */}
-        <HeroSection />
+        {/* Banner Section with banner-section.png & GSAP Animated Snails and Pests */}
+        <BannerSection />
 
         {/* Brand Story & Core Values (Về Hòa Tràm) */}
         <BrandStory />

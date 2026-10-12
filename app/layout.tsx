@@ -17,8 +17,13 @@ export const metadata: Metadata = {
   description: "Công ty Nông Dược Hòa Tràm chuyên cung ứng phân bón sinh học và thuốc bảo vệ thực vật chất lượng cao, đồng hành cùng nhà nông kiến tạo mùa vàng bội thu.",
   keywords: ["Hòa Tràm", "nông dược hòa tràm", "phân bón hòa tràm", "thuốc bảo vệ thực vật", "thuốc trừ sâu sinh học", "thuốc trị nấm bệnh"],
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+    ],
+    shortcut: ["/logo.png"],
+    apple: [
+      { url: "/logo.png", type: "image/png" },
+    ],
   },
 };
 
@@ -28,6 +33,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="vi"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/logo.png" sizes="any" type="image/png" />
+        <link rel="shortcut icon" href="/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
